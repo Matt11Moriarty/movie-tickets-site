@@ -1,0 +1,63 @@
+[
+    {
+      "seatNumber": "A1",
+      "status": "available"
+    },
+    {
+      "seatNumber": "A2",
+      "status": "available"
+    },
+    {
+      "seatNumber": "A3",
+      "status": "available"
+    },
+    {
+      "seatNumber": "A4",
+      "status": "available"
+    },
+    {
+      "seatNumber": "A5",
+      "status": "available"
+    },
+    {
+      "seatNumber": "B1",
+      "status": "available"
+    },
+    {
+      "seatNumber": "B2",
+      "status": "available"
+    },
+    {
+      "seatNumber": "B3",
+      "status": "available"
+    },
+    {
+      "seatNumber": "B4",
+      "status": "available"
+    },
+    {
+      "seatNumber": "B5",
+      "status": "available"
+    },
+    {
+      "seatNumber": "C1",
+      "status": "available"
+    },
+    {
+      "seatNumber": "C2",
+      "status": "available"
+    },
+    {
+      "seatNumber": "C3",
+      "status": "available"
+    },
+    {
+      "seatNumber": "C4",
+      "status": "available"
+    },
+    {
+      "seatNumber": "C5",
+      "status": "available"
+    }
+  ]
+  
