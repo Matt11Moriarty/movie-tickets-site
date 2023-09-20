@@ -1,0 +1,29 @@
+{
+  "name": "movie-tickets-site",
+  "version": "1.0.0",
+  "description": "in-house movie ticketing software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matt11Moriarty/movie-tickets-site.git"
+  },
+  "author": "Team 9",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Matt11Moriarty/movie-tickets-site/issues"
+  },
+  "homepage": "https://github.com/Matt11Moriarty/movie-tickets-site#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.1",
+    "sequelize": "^6.33.0"
+  }
+}
