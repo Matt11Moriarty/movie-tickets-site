@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Big Trouble in Little China",
+      "imageLink": "/images/btilcExample",
+      "description": "A rough-and-tumble trucker helps rescue his friend's fiancée from an ancient sorcerer in a supernatural battle beneath Chinatown."
+    },
+    {
+      "title": "The Godfather",
+      "imageLink": "/images/tgExample",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
+    },
+    {
+      "title": "Pulp Fiction",
+      "imageLink": "pfExample",
+      "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+    },
+    {
+      "title": "Inception",
+      "imageLink": "iExample",
+      "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO."
+    },
+    {
+      "title": "The Dark Knight",
+      "imageLink": "tdktgExample",
+      "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+    }
+  ]
