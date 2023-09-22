@@ -19,6 +19,10 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    trailerLink: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     description: {
       type: DataTypes.STRING,
     },
