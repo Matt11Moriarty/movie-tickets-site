@@ -18,6 +18,20 @@ Seat.init(
       type: DataTypes.BOOLEAN,
       defaultValue: true, // Seats are initially available
     },
+    movie_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'movie',
+        key: 'id'
+      }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,

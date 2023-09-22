@@ -1,1 +1,14 @@
-{{!--  --}}
+{{#each movies as |movie| }}
+<div class="row mb-4">
+  <div class="col-md-5">
+    <h2>
+      <a href="/movie/{{movie.id}}">{{movie.title}}</a>
+    </h2>
+    <p>{{movie.imageLink}}</p>
+    <img src="{{movie.imageLink}}" alt="movie image">
+    <p>
+     {{movie.description}}   
+    </p>
+  </div>
+</div>
+{{/each}}
