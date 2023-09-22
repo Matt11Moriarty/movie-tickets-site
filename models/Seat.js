@@ -11,7 +11,7 @@ Seat.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    seat_number: {
+    seatNumber: {
       type: DataTypes.STRING,
     },
     isAvailable: {

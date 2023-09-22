@@ -15,14 +15,14 @@ const seedDatabase = async () => {
       returning: true,
     });
 
+    await Movie.bulkCreate(movieData); 
+    console.log('\n----- MOVIE SEEDED -----\n');
+
     for (const seat of seatData) {
       await Seat.create({
         ...seat, 
       });
     }
-
-    await Movie.bulkCreate(movieData); 
-    console.log('\n----- MOVIE SEEDED -----\n');
 
     process.exit(0);
   } catch (error) {
