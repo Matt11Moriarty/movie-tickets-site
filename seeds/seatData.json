@@ -1,63 +1,302 @@
 [
-    {
-      "seatNumber": "A1",
-      "status": "available"
-    },
-    {
-      "seatNumber": "A2",
-      "status": "available"
-    },
-    {
-      "seatNumber": "A3",
-      "status": "available"
-    },
-    {
-      "seatNumber": "A4",
-      "status": "available"
-    },
-    {
-      "seatNumber": "A5",
-      "status": "available"
-    },
-    {
-      "seatNumber": "B1",
-      "status": "available"
-    },
-    {
-      "seatNumber": "B2",
-      "status": "available"
-    },
-    {
-      "seatNumber": "B3",
-      "status": "available"
-    },
-    {
-      "seatNumber": "B4",
-      "status": "available"
-    },
-    {
-      "seatNumber": "B5",
-      "status": "available"
-    },
-    {
-      "seatNumber": "C1",
-      "status": "available"
-    },
-    {
-      "seatNumber": "C2",
-      "status": "available"
-    },
-    {
-      "seatNumber": "C3",
-      "status": "available"
-    },
-    {
-      "seatNumber": "C4",
-      "status": "available"
-    },
-    {
-      "seatNumber": "C5",
-      "status": "available"
-    }
-  ]
-  
+  {
+    "seatNumber": "A1",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "A2",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "A3",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "A4",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "A5",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "B1",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "B2",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "B3",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "B4",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "B5",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "C1",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "C2",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "C3",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "C4",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "C5",
+    "movie_id": 1
+  },
+  {
+    "seatNumber": "A1",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "A2",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "A3",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "A4",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "A5",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "B1",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "B2",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "B3",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "B4",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "B5",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "C1",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "C2",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "C3",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "C4",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "C5",
+    "movie_id": 2
+  },
+  {
+    "seatNumber": "A1",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "A2",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "A3",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "A4",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "A5",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "B1",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "B2",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "B3",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "B4",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "B5",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "C1",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "C2",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "C3",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "C4",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "C5",
+    "movie_id": 3
+  },
+  {
+    "seatNumber": "A1",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "A2",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "A3",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "A4",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "A5",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "B1",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "B2",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "B3",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "B4",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "B5",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "C1",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "C2",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "C3",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "C4",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "C5",
+    "movie_id": 4
+  },
+  {
+    "seatNumber": "A1",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "A2",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "A3",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "A4",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "A5",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "B1",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "B2",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "B3",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "B4",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "B5",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "C1",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "C2",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "C3",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "C4",
+    "movie_id": 5
+  },
+  {
+    "seatNumber": "C5",
+    "movie_id": 5
+  }
+]

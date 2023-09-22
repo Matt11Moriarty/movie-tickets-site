@@ -17,4 +17,20 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/movies/:id', async (req, res) => {
+    try {
+        const movieData = await Movie.findByPk(req.params.id, {
+            include: [
+                {
+                    model: Seat,
+                    attributes: ['id', 'seatNumber', 'isAvailable']
+                }
+            ]
+        })
+        const movie = movieData.get({ plain: true });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 module.exports = router;
