@@ -5,17 +5,9 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        const movieData = await Movie.findAll({
-            include: [
-                {
-                    model: Seat,
-                    attributes: ['isAvailable', 'seat_number']
-                }
-            ]
-        });
-        
+        const movieData = await Movie.findAll();
         const movies = movieData.map((movie) => movie.get({ plain: true }))
-
+        console.log(movies);
         res.render('homepage', {
             movies,
             logged_in: req.session.logged_in

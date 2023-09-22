@@ -1,12 +1,12 @@
 [
     {
       "title": "Big Trouble in Little China",
-      "imageLink": "/images/btilcExample",
+      "imageLink": "../public/images/",
       "description": "A rough-and-tumble trucker helps rescue his friend's fiancée from an ancient sorcerer in a supernatural battle beneath Chinatown."
     },
     {
       "title": "The Godfather",
-      "imageLink": "/images/tgExample",
+      "imageLink": "https://m.media-amazon.com/images/M/MV5BNzlhYjEzOGItN2MwNS00ODRiLWE5OTItYThiNmJlMTdmMzgxXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
       "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
     },
     {

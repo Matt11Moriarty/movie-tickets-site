@@ -15,6 +15,10 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    imageLink: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     description: {
       type: DataTypes.STRING,
     },
@@ -24,7 +28,7 @@ Movie.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'movie',
   }
 );
 
