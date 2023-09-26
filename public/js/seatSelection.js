@@ -63,5 +63,3 @@ submitButton.addEventListener('click', async () => {
     console.error('Error:', error);
   }
 });
-
-console.log('u there?')
