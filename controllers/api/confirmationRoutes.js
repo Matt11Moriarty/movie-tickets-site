@@ -1,13 +1,23 @@
 const express = require('express');
 const router = express.Router();
+const { Seat, Movie } = require('../../models');
 
 // Define a route for the "/confirmation" path
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
  // Parse the selected seats data from query parameters
- const selectedSeats = JSON.parse(req.query.selectedSeats || '[]'); // Default to an empty array if no data is provided
+try {
 
- // Render the confirmation page with the selected seats data
- res.render('confirmation', { selectedSeats });
+    const movieId = req.query.movieId;
+    const selectedSeats = JSON.parse(req.query.selectedSeats || '[]');
+
+   res.render('confirmation', {
+    movieId,
+    selectedSeats,
+    logged_in: req.session.logged_in
+   })
+} catch (err) {
+    res.status(500).json(err);
+}
 });
 
 
