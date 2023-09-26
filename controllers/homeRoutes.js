@@ -27,7 +27,7 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
-router.get('/movies/:id', async (req, res) => {
+router.get('/movie/:id', withAuth, async (req, res) => {
     try {
         const movieData = await Movie.findByPk(req.params.id, {
             include: [
@@ -38,6 +38,11 @@ router.get('/movies/:id', async (req, res) => {
             ]
         })
         const movie = movieData.get({ plain: true });
+        console.log(movie);
+        res.render('movie', {
+            ...movie,
+            logged_in: req.session.logged_in
+        })
     } catch (err) {
         res.status(500).json(err);
     }
