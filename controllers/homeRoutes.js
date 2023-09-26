@@ -27,6 +27,7 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
+
 router.get('/movie/:id', withAuth, async (req, res) => {
     try {
         const movieData = await Movie.findByPk(req.params.id, {
