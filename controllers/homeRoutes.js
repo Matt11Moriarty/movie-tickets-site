@@ -49,7 +49,7 @@ router.get('/movie/:id', withAuth, async (req, res) => {
 })
 
 // Define a GET route to render the seat selection page
-app.get('/seatSelection', (req, res) => {
+router.get('/seatSelection', (req, res) => {
     // Here, you can pass any data needed for rendering the seat selection page
     // For example, you can fetch available seats from your database and pass them as an object
     const availableSeats = [
@@ -60,7 +60,7 @@ app.get('/seatSelection', (req, res) => {
     res.render('seatSelection', { seats: availableSeats });
   });
 
-  app.get('/seatSelection', (req, res) => {
+router.get('/seatSelection', (req, res) => {
     // Define 'rows' or import it from another module
     const rows = [
       { label: 'A', seats: [] },
