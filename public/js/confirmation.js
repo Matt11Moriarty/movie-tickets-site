@@ -16,19 +16,38 @@ const postSeatdata = async () => {
             'Content-Type': 'application/json',
         }
     });
-    // if (response.ok) {
-    //     document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${selectedSeats}]`)
-    // } else {
-    //     alert('Failed to post seats')
-    // }
+    if (response.ok) {
+        document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${selectedSeats}]`)
+    } else {
+        alert('Failed to post seats')
+    }
  
 }
 
 const showTickets = async (event) => {
+    let currentURL = document.location.href;
+    let urlParams = new URLSearchParams(currentURL);
+
+    let movie_id = urlParams.get('movieId');
+    let seats = urlParams.get('selectedSeats');
+    if (seats) {
+        seats = JSON.parse(seats).toString()
+    }
     
-    const response = await fetch(`/api/ticket`)
+    const response = await fetch(`/api/tickets`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    if (response.ok) {
+        document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${selectedSeats}]`)
+        console.log(response);
+    } else {
+        alert('Failed to get ticket')
+    }
 }
 
-document.querySelector('.ticket-button').addEventListener('click', showTickets);
+document.querySelector('#ticket-button').addEventListener('click', showTickets);
 
 postSeatdata();
