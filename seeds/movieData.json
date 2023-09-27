@@ -7,25 +7,25 @@
     },
     {
       "title": "The Godfather",
-      "imageLink": "../public/images/bigTroubleInLittleChina.jpg",
+      "imageLink": "../images/TheGodFather.jpeg",
       "trailerLink": "https://youtu.be/UaVTIH8mujA?si=ziLVxjon6PQitzuW",
       "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
     },
     {
       "title": "Pulp Fiction",
-      "imageLink": "pfExample",
+      "imageLink": "../images/PulpFiction.jpeg",
       "trailerLink": "https://youtu.be/tGpTpVyI_OQ?si=xh_sqo440T_K7hFp",
       "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
     },
     {
       "title": "Inception",
-      "imageLink": "iExample",
+      "imageLink": "images/Inception.jpg",
       "trailerLink": "https://youtu.be/YoHD9XEInc0?si=GldLGj301_8e7n23",
       "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO."
     },
     {
       "title": "The Dark Knight",
-      "imageLink": "tdktgExample",
+      "imageLink": "images/TheDarkKnight.jpg",
       "trailerLink": "https://youtu.be/EXeTwQWrcwY?si=4ICV935YMVhxhYgt",
       "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
     }
