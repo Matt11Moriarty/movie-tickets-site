@@ -27,6 +27,22 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
+router.get('/confirmation', async (req, res) => {
+  // Parse the selected seats data from query parameters
+  try {
+  
+      const movieId = req.query.movieId;
+      const selectedSeats = JSON.parse(req.query.selectedSeats || '[]');
+  
+    res.render('confirmation', {
+      movieId,
+      selectedSeats,
+      logged_in: req.session.logged_in
+    })
+  } catch (err) {
+      res.status(500).json(err);
+  }
+  });
 
 router.get('/movie/:id', withAuth, async (req, res) => {
     try {
