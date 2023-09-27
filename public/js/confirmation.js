@@ -1,3 +1,5 @@
+let qrCode = document.querySelector('#qr-code');
+
 const postSeatdata = async () => {
     let currentURL = document.location.href;
     let urlParams = new URLSearchParams(currentURL);
@@ -16,11 +18,11 @@ const postSeatdata = async () => {
             'Content-Type': 'application/json',
         }
     });
-    if (response.ok) {
-        document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${selectedSeats}]`)
-    } else {
-        alert('Failed to post seats')
-    }
+    // if (response.ok) {
+    //     document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${seats}]`)
+    // } else {
+    //     alert('Failed to post seats')
+    // }
  
 }
 
@@ -41,13 +43,17 @@ const showTickets = async (event) => {
         }
     });
     if (response.ok) {
-        document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${selectedSeats}]`)
-        console.log(response);
+        const responseData = await response.json();
+        console.log(responseData)
+        qrCode.innerHTML = responseData;
+        // document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${seats}]`)
+        // console.log(responseData);
     } else {
         alert('Failed to get ticket')
     }
 }
 
 document.querySelector('#ticket-button').addEventListener('click', showTickets);
+
 
 postSeatdata();
