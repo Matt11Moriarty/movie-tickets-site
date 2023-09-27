@@ -1,16 +1,21 @@
-{{#each movies as |movie| }}
-<div class="row mb-4">
-  <div class="col-md-5">
+<div id="movie-container">
+  {{#each movies as |movie| }}
+  <div class="movie-boxes">
     <h2>
       <a href="/movie/{{movie.id}}">{{movie.title}}</a>
     </h2>
-    <p><img src="{{movie.imageLink}}" alt="movie image"></p>
+    <div class="poster-box">
+      <img src="{{movie.imageLink}}" alt="{{movie.title}} Poster">
+    </div>
     <p>
-     <a href="{{movie.trailerLink}}" target="_blank">Trailer</a>
+      <a href="{{movie.trailerLink}}" target="_blank">Watch Trailer</a>
     </p>
     <p>
-     {{movie.description}}   
+      {{movie.description}}   
     </p>
+    <a class="btn btn-primary" href="/movie/{{movie.id}}">
+      Get Tickets
+    </a>
   </div>
+  {{/each}}
 </div>
-{{/each}}

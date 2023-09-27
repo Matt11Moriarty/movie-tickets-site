@@ -99,4 +99,8 @@ router.get('/seatSelection', (req, res) => {
     res.render('seatSelection', { rows: rows });
   });
 
+  router.get('/about', (req, res) => {
+    res.render('about')
+  })
+
 module.exports = router;

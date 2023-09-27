@@ -1,3 +1,54 @@
+/*----------------------Andrew Styling Code-----------------------*/
+
+#movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 95%;
+  max-width: 1512px;
+}
+
+.movie-boxes {
+  border: 1px solid #BBBBBB;
+  border-radius: 6px;
+  min-width: 360px;
+  width: calc(33% - 24px);
+  margin: 12px;
+  padding: 12px;
+}
+
+.movie-boxes .poster-box {
+  text-align: center;
+}
+
+.movie-boxes img {
+  max-width: 85%;
+}
+
+/* .movie-boxes .ticket-link {
+  display: block;
+  width: 100%;
+  background: #0056b3;
+  color: #fff;
+  padding: 6px;
+} */
+
+.mx-auto {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 48px 0;
+}
+
+.mx-auto h1, .mx-auto h2 {
+  text-align: center;
+}
+
+.mx-auto label, .mx-auto input, .mx-auto button, .movie-boxes .btn {
+  width: 100%;
+}
+
+/*----------------------Peter's Seat Code-----------------------*/
+
 /* Define a style for the seat container */
 .seat-container {
    display: flex;
