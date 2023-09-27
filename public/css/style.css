@@ -1,8 +1,10 @@
 /* Define a style for the seat container */
 .seat-container {
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
   }
   
   /* Style each row */
@@ -54,7 +56,7 @@
 .screen {
     height: 20px; /* Adjust the height as needed for your design */
     background-color: #333; /* Screen color */
-    margin: 20px 500px 50px; /* Space between screen and the first row */
+    margin: 20px 300px 50px; /* Space between screen and the first row */
     display: flex;
     justify-content: center;
     align-items: center;
