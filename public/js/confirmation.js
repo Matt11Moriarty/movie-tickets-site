@@ -1,31 +1,27 @@
+const postSeatdata = async () => {
+    let currentURL = document.location.href;
+    let urlParams = new URLSearchParams(currentURL);
 
-let currentURL = document.location.href;
+    let movie_id = urlParams.get('movieId');
+    let seats = urlParams.get('selectedSeats');
 
-// Use URLSearchParams to parse the query parameters
-let urlParams = new URLSearchParams(currentURL);
-console.log(urlParams);
-// Get the values of movieId and selectedSeats
-let movieId = urlParams.get('movieId');
-let selectedSeats = urlParams.get('selectedSeats');
+    if (seats) {
+        seats = JSON.parse(seats).toString()
+    }
 
-// If selectedSeats is in JSON format, you can parse it into an array
-if (selectedSeats) {
-    selectedSeats = JSON.parse(selectedSeats);
+    const response = await fetch('/api/confirmation', {
+        method: 'POST',
+        body: JSON.stringify({ movie_id, seats }),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    // if (response.ok) {
+    //     document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${selectedSeats}]`)
+    // } else {
+    //     alert('Failed to post seats')
+    // }
+ 
 }
 
-let data = {
-    "movieId": movieId,
-    "selectedSeats": selectedSeats,
-    // "userId": req.session.user_id
-}
-
-console.log(data);
-
-// Log the values to the console
-console.log("movieId:", movieId);
-console.log("selectedSeats:", selectedSeats);
-
-QRCode.toString()
-
-
-
+postSeatdata();
