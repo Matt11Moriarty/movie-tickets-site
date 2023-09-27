@@ -63,7 +63,7 @@
     margin-bottom: 10px;
   }
   
-  /* Style the row label (e.g., A, B, etc.) */
+  /* Style the row
   .row-label {
     font-size: 18px;
     font-weight: bold;
@@ -99,15 +99,15 @@
   .seat.reserved {
     background-color: #ccc;
     color: #888;
-    cursor: not-allowed; /* Disable cursor for reserved seats */
+    cursor: not-allowed; 
   }
   
   
 /* Style the screen section */
 .screen {
-    height: 20px; /* Adjust the height as needed for your design */
-    background-color: #333; /* Screen color */
-    margin: 20px 300px 50px; /* Space between screen and the first row */
+    height: 20px; 
+    background-color: #333;
+    margin: 20px 300px 50px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,20 +115,20 @@
   
   /* Style the screen text */
   .screen-text {
-    color: #fff; /* Text color */
-    font-size: 18px; /* Text size */
+    color: #fff; 
+    font-size: 18px; 
   }
   
   /* Style for the submit button container */
 .submit-button {
     text-align: center;
-    margin-top: 20px; /* Adjust the margin as needed to control spacing */
+    margin-top: 20px; 
   }
   
   /* Style for the submit button */
   #submit-seats {
     padding: 10px 20px;
-    background-color: #000205; /* Change to your desired button color */
+    background-color: #000205; 
     color: #fff;
     border: none;
     cursor: pointer;
@@ -138,6 +138,11 @@
   
   /* Hover effect for the submit button */
   #submit-seats:hover {
-    background-color: #0056b3; /* Change to a darker shade for hover effect */
+    background-color: #0056b3; 
   }
   
+  .movie-image {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+  }
