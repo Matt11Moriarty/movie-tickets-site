@@ -1,4 +1,17 @@
 /*----------------------Andrew Styling Code-----------------------*/
+* {
+  font-family: 'REM', sans-serif;
+}
+
+p {
+  font-weight: 300;
+}
+
+h1, h2, a {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
 
 #movie-container {
   display: flex;
@@ -12,13 +25,17 @@
   border: 1px solid #BBBBBB;
   border-radius: 6px;
   min-width: 360px;
-  width: calc(33% - 24px);
-  margin: 12px;
-  padding: 12px;
+  width: calc(33% - 1.25em);
+  margin: 0.75em;
+  padding: 0.75em;
+  display: inline-grid;
+  align-items: end;
 }
 
 .movie-boxes .poster-box {
+  display: block;
   text-align: center;
+  margin: 18px 0;
 }
 
 .movie-boxes img {
@@ -45,6 +62,10 @@
 
 .mx-auto label, .mx-auto input, .mx-auto button, .movie-boxes .btn {
   width: 100%;
+}
+
+.movie-boxes .btn {
+  font-size: 24px;
 }
 
 /*----------------------Peter's Seat Code-----------------------*/
