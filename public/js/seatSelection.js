@@ -51,14 +51,14 @@ submitButton.addEventListener('click', async () => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-
+    const movieId = document.location.href.split('').pop().toString();
     const data = await response.json();
 
     // Handle the response from the server (e.g., show a confirmation message)
     console.log('Seats saved successfully:', data);
 
     // After successfully saving seats, navigate to the confirmation page
-    window.location.href = `/confirmation?selectedSeats=${JSON.stringify(selectedSeats)}`; // Redirect to the confirmation page
+    window.location.href = `/confirmation?&movieId=${movieId}&selectedSeats=${JSON.stringify(selectedSeats)}`; // Redirect to the confirmation page
   } catch (error) {
     console.error('Error:', error);
   }
