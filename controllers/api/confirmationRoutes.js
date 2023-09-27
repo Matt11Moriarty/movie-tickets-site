@@ -3,7 +3,6 @@ const router = express.Router();
 const { Seat, Movie, Ticket } = require('../../models');
 
 
-// THIS NEEDS TO BE A TICKET
 router.post('/', async (req, res) => {
     try {
         
@@ -17,6 +16,7 @@ router.post('/', async (req, res) => {
         res.status(500).json(err);
     }
 })
+
 
 
 

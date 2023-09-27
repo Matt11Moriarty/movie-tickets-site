@@ -24,4 +24,11 @@ const postSeatdata = async () => {
  
 }
 
+const showTickets = async (event) => {
+    
+    const response = await fetch(`/api/ticket`)
+}
+
+document.querySelector('.ticket-button').addEventListener('click', showTickets);
+
 postSeatdata();
