@@ -46,6 +46,7 @@ const showTickets = async (event) => {
         const responseData = await response.json();
         console.log(responseData)
         qrCode.innerHTML = responseData;
+        
         // document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${seats}]`)
         // console.log(responseData);
     } else {
