@@ -22,4 +22,16 @@ router.post('/save', (req, res) => {
   res.redirect('/confirmation');//added
 });
 
+router.post('/seed', async (req, res) => {
+  try {
+    const newSeat = await Seat.create({
+      ...req.body,
+    });
+
+    res.status(200).json(newSeat);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
