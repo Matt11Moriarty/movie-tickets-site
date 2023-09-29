@@ -3,14 +3,11 @@ let qrCode = document.querySelector('#qr-code');
 const postSeatdata = async () => {
     let currentURL = document.location.href;
     let urlParams = new URLSearchParams(currentURL);
-
     let movie_id = urlParams.get('movieId');
     let seats = urlParams.get('selectedSeats');
-
     if (seats) {
         seats = JSON.parse(seats).toString()
     }
-
     const response = await fetch('/api/confirmation', {
         method: 'POST',
         body: JSON.stringify({ movie_id, seats }),
@@ -23,13 +20,11 @@ const postSeatdata = async () => {
 const showTickets = async (event) => {
     let currentURL = document.location.href;
     let urlParams = new URLSearchParams(currentURL);
-
     let movie_id = urlParams.get('movieId');
     let seats = urlParams.get('selectedSeats');
     if (seats) {
         seats = JSON.parse(seats).toString()
     }
-    
     const response = await fetch(`/api/tickets`, {
         method: 'GET',
         headers: {
@@ -37,9 +32,7 @@ const showTickets = async (event) => {
         }
     });
     if (response.ok) {
-        console.log(response);
         let responseData = await response.json();
-        console.log(responseData)
         qrCode.innerHTML = `<img src=${responseData.qrTicket}>`;
     } else {
         alert('Failed to get ticket')

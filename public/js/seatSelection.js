@@ -1,4 +1,3 @@
-
 const rows = [
   { label: 'A', seats: [...Array(10).keys()].map(number => ({ number: number + 1, reserved: false })) },
   { label: 'B', seats: [...Array(10).keys()].map(number => ({ number: number + 1, reserved: false })) },
@@ -16,7 +15,7 @@ seats.forEach((seat, index) => {
     if (!seat.classList.contains('reserved')) {
       seat.classList.toggle('selected');
       if (seat.classList.contains('selected')) {
-        selectedSeats.push(index + 1); // Store the seat index (or seat number)
+        selectedSeats.push(index + 1); 
       } else {
         const seatIndex = selectedSeats.indexOf(index + 1);
         if (seatIndex > -1) {
@@ -27,19 +26,18 @@ seats.forEach((seat, index) => {
   });
 });
 
-// Function to update the selected seats container
+
 function updateSelectedSeats() {
   const selectedSeatsContainer = document.getElementById('selected-seats-container');
   const selectedSeatsHtml = selectedSeats.map(seatNumber => `<div>Seat ${seatNumber}</div>`).join('');
   selectedSeatsContainer.innerHTML = `<h2>Selected Seats:</h2>${selectedSeatsHtml}`;
 }
 
-// Function to save selected seats to localStorage
+
 function saveSelectedSeats() {
   localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));
 }
 
-// Event listener for the submit button
 submitButton.addEventListener('click', async () => {
   try {
     const response = await fetch('/api/seats', {
@@ -53,12 +51,8 @@ submitButton.addEventListener('click', async () => {
     }
     const movieId = document.location.href.split('').pop().toString();
     const data = await response.json();
-
-    // Handle the response from the server (e.g., show a confirmation message)
     console.log('Seats saved successfully:', data);
-
-    // After successfully saving seats, navigate to the confirmation page
-    window.location.href = `/confirmation?&movieId=${movieId}&selectedSeats=${JSON.stringify(selectedSeats)}`; // Redirect to the confirmation page
+    window.location.href = `/confirmation?&movieId=${movieId}&selectedSeats=${JSON.stringify(selectedSeats)}`;
   } catch (error) {
     console.error('Error:', error);
   }

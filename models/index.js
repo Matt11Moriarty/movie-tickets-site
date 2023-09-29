@@ -20,10 +20,6 @@ User.hasMany(Seat, {
   foreignKey: 'user_id'
 });
 
-// User.hasOne(Ticket, {
-//   foreignKey: 'user_id'
-// });
-
 Ticket.belongsTo(User, {
   foreignKey: 'user_id'
 })

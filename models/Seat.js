@@ -16,7 +16,7 @@ Seat.init(
     },
     isAvailable: {
       type: DataTypes.BOOLEAN,
-      defaultValue: true, // Seats are initially available
+      defaultValue: true,
     },
     movie_id: {
       type: DataTypes.INTEGER,

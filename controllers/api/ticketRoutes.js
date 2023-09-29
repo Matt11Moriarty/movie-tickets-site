@@ -1,7 +1,7 @@
 const express = require('express');
 const router = require('express').Router();
 const qrCode = require('qrcode');
-const { Ticket , Seat , User } = require('../../models');
+const { Ticket } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -13,10 +13,8 @@ router.get('/', async (req, res) => {
                 raw: true
             }
         )
-        console.log(ticketData);
         qrCode.toDataURL(ticketData, function (err, qrTicket) {
             if (err) throw err
-            console.log(qrTicket)
             qrObj = {
                 qrTicket
             }
