@@ -1,19 +1,94 @@
+/*--REMOVING DEFAULT STYLING--*/
+body, h2 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
 /*----------------------Andrew Styling Code-----------------------*/
 * {
   font-family: 'REM', sans-serif;
 }
 
-p {
-  font-weight: 300;
+body {
+  background: #29292B;
+  /* background: url(../images/paper-texture-inv.png) repeat; */
 }
 
-h1, h2, a {
+p {
+  font-weight: 300;
+  color: #F3E8EE;
+  margin: 12px 0;
+}
+
+h2, a {
   text-transform: uppercase;
-  font-weight: 500;
+}
+
+h2, h3, a {
   text-align: center;
 }
 
-#movie-container {
+h2, h2 a, h3 {
+  color: #F3E8EE;
+  font-weight: 600;
+}
+
+h2 a:hover {
+  color: #E66056
+}
+
+header {
+  background: #D90429;
+  margin-bottom: 1%;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 300;
+  width: 380px;
+  line-height: 1;
+  font-size: 48px;
+  color: #F3E8EE;
+}
+
+header div {
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: block;
+  list-style: none;
+  margin: 12px 6px;
+}
+
+nav ul li a {
+  transition: .25s ease-in-out;
+  padding: 12px;
+}
+
+/* nav ul li:nth-last-child(1) a {
+  border: 2px solid #F3E8EE;
+  border-radius: 4px;
+} */
+
+nav a {
+  color: #F3E8EE;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+#movie-container, header div {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -22,33 +97,38 @@ h1, h2, a {
 }
 
 .movie-boxes {
-  border: 1px solid #BBBBBB;
+  /* border: 2px solid #F3E8EE; */
+  /* background: linear-gradient(to right,rgba(0, 71, 66, 0.499), rgba(0, 56, 35, 0.7)), url(paper-texture.png) repeat;*/
   border-radius: 6px;
-  min-width: 360px;
-  width: calc(33% - 1.25em);
-  margin: 0.75em;
-  padding: 0.75em;
+  width: 31.3333%;
+  margin: 1%;
+  padding: 1%;
   display: inline-grid;
   align-items: end;
+  transition: .25s ease-in-out;
+}
+
+.movie-boxes:hover {
+  transition: .25s ease-in-out;
+  background: rgba(71, 91, 99, 0.5);
+  /* box-shadow: 0px 0 15px 0px rgb(243 232 238 / 15%); */
 }
 
 .movie-boxes .poster-box {
   display: block;
   text-align: center;
-  margin: 18px 0;
+  margin: 18px 0 12px 0;
 }
 
 .movie-boxes img {
   max-width: 85%;
+  transition: .25s ease-in-out;
 }
 
-/* .movie-boxes .ticket-link {
-  display: block;
-  width: 100%;
-  background: #0056b3;
-  color: #fff;
-  padding: 6px;
-} */
+.movie-boxes:hover img {
+  transition: .25s ease-in-out;
+  transform: scale(102.5%);
+}
 
 .mx-auto {
   background: #FFFFFF;
@@ -60,34 +140,96 @@ h1, h2, a {
   text-align: center;
 }
 
-.mx-auto label, .mx-auto input, .mx-auto button, .movie-boxes .btn {
+.mx-auto label, .mx-auto input, .mx-auto button, .main-action-btn .btn {
   width: 100%;
 }
 
-.movie-boxes .btn {
+.main-action-btn {
   font-size: 24px;
+  display: block;
+  width: calc(100% - 12px);
+  background: #D90429;
+  color: #F3E8EE;
+  padding: 12px 6px;
+  border-radius: 4px;
+  transition: .25s ease-in-out;
 }
 
-/*----------------------Peter's Seat Code-----------------------*/
+.main-action-btn:hover, .secondary-button:hover {
+  color: #F3E8EE !important;
+  background: #E66056 !important;
+  transition: .25s ease-in-out;
+}
+
+nav a:hover {
+  transition: .25s ease-in-out;
+  background-color: #3A4449;
+  color: #F3E8EE !important;
+}
+
+.secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D90429;
+  padding: 6px 12px 6px 6px;
+  border-radius: 4px;
+  margin: auto;
+  transition: .25s ease-in-out;
+}
+
+.secondary-button img {
+  width: 24px;
+  margin-right: 6px;
+}
+
+.secondary-button p {
+  margin: 0;
+}
+
+#theater-container, #confirmation-container {
+  background: #3A4449;
+  padding: 1%;
+  max-width: 1480px;
+  width: 95%;
+  margin: auto;
+  border-radius: 6px;
+  height: auto;
+  min-height: 74vh;
+}
+
+.card {
+  margin: auto;
+}
+
+.card img {
+  width: 240px;
+}
+
+.card-title {
+  color: #29292B;
+}
+
+/*----------------------Peter's Seat Code as Edited by Andrew-----------------------*/
 
 /* Define a style for the seat container */
 .seat-container {
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
   }
   
   /* Style each row */
   .row {
     margin-bottom: 10px;
+    align-items: center;
   }
   
-  /* Style the row
   .row-label {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 400;
+    color: #F3E8EE;
   }
   
   /* Style the seats */
@@ -102,33 +244,39 @@ h1, h2, a {
     width: 30px;
     height: 30px;
     margin: 5px;
-    background-color: #ccc;
-    border: 1px solid #aaa;
-    border-radius: 0px 0px 10px 10px;
+    background-color: #F3E8EE;
+    border-radius: 2px 2px 12px 12px;
     text-align: center;
     line-height: 30px;
     cursor: pointer; /* Add a cursor pointer for interactive selection */
+    transition: .25s ease-in-out;
+  }
+
+  .seat:hover {
+    background:#E66056;
+    transition: .25s ease-in-out;
   }
   
   /* Style selected seats */
   .seat.selected {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #D90429;
+    color: #F3E8EE;
   }
   
   /* Style reserved seats */
   .seat.reserved {
-    background-color: #ccc;
-    color: #888;
+    background-color: #29292B;
+    color: #F3E8EE;
     cursor: not-allowed; 
   }
-  
   
 /* Style the screen section */
 .screen {
     height: 20px; 
-    background-color: #333;
-    margin: 20px 300px 50px; 
+    background-color: #29292B;
+    width: 520px;
+    margin: 20px auto;
+    padding: 18px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,31 +287,33 @@ h1, h2, a {
     color: #fff; 
     font-size: 18px; 
   }
-  
-  /* Style for the submit button container */
+
 .submit-button {
-    text-align: center;
-    margin-top: 20px; 
+  width: 420px;
+}
+
+/* -----------Responsive------------ */
+
+@media screen and (max-width:1024px) {
+  .movie-boxes {
+    width: 47%;
+    margin: 1.5%;
+    padding: 1.5%;
   }
-  
-  /* Style for the submit button */
-  #submit-seats {
-    padding: 10px 20px;
-    background-color: #000205; 
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+}
+
+@media screen and (max-width:792px) {
+  header {
+    background-color: darkgreen;
   }
-  
-  /* Hover effect for the submit button */
-  #submit-seats:hover {
-    background-color: #0056b3; 
+}
+
+@media screen and (max-width: 592px) {
+  header {
+    background-color: darkmagenta;
   }
-  
-  .movie-image {
-    width: 100%; 
-    max-width: 300px; 
-    height: auto; 
+
+  .movie-boxes {
+    width: 100%;
   }
+}

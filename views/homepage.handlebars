@@ -7,13 +7,14 @@
     <a class="poster-box" href="/movie/{{movie.id}}">
       <img src="{{movie.imageLink}}" alt="{{movie.title}} Poster">
     </a>
-    <p>
-      <a href="{{movie.trailerLink}}" target="_blank">Watch Trailer</a>
-    </p>
+    <a class="secondary-button" href="{{movie.trailerLink}}" target="_blank">
+      <img src="../images/arrow-4.svg" alt="Play Link">
+      <p>Watch Trailer</p>
+    </a>
     <p>
       {{movie.description}}   
     </p>
-    <a class="btn btn-primary" href="/movie/{{movie.id}}">
+    <a class="main-action-btn" href="/movie/{{movie.id}}">
       Get Tickets
     </a>
   </div>
