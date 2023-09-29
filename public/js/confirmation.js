@@ -17,13 +17,7 @@ const postSeatdata = async () => {
         headers: {
             'Content-Type': 'application/json',
         }
-    });
-    // if (response.ok) {
-    //     document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${seats}]`)
-    // } else {
-    //     alert('Failed to post seats')
-    // }
- 
+    }); 
 }
 
 const showTickets = async (event) => {
@@ -43,12 +37,10 @@ const showTickets = async (event) => {
         }
     });
     if (response.ok) {
-        const responseData = await response.json();
+        console.log(response);
+        let responseData = await response.json();
         console.log(responseData)
-        qrCode.innerHTML = responseData;
-        
-        // document.location.replace(`/confirmation/?&movieId=${movie_id}&selectedSeats=[${seats}]`)
-        // console.log(responseData);
+        qrCode.innerHTML = `<img src=${responseData.qrTicket}>`;
     } else {
         alert('Failed to get ticket')
     }

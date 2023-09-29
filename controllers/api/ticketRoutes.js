@@ -14,11 +14,14 @@ router.get('/', async (req, res) => {
             }
         )
         console.log(ticketData);
-        const qrTicket = qrCode.toString(ticketData, function (err, string) {
+        qrCode.toDataURL(ticketData, function (err, qrTicket) {
             if (err) throw err
-            console.log(string)
-        });
-        res.status(200).json(qrTicket)
+            console.log(qrTicket)
+            qrObj = {
+                qrTicket
+            }
+            res.status(200).json(qrObj)
+        });        
     } catch (err) {
         res.status(500).json(err);
     }
