@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Nine's Movie Theater</title>
+    <title>Classic Flix</title>
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Add your custom CSS files -->
@@ -15,16 +15,16 @@
 <body>
     <header>
         <div>
-            <h1>Team Nine's Movie Theater</h1>
+            <h1>Classic Flix</h1>
             <nav>
               <ul>
-                <li><a href="/">Home</a>
-                <li><a  href="/about">About</a>
+                <li><a href="/">Home</a></li>
+                <li><a  href="/about">About</a></li>
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
-                <a id="logout">Logout</a>
+                <li><a id="logout">Logout</a></li>
                 {{else}}
-                <a href="/login">Login</a>
+                <li><a href="/login">Login</a></li>
                 {{/if}}
               </ul>
             </nav>
@@ -34,8 +34,22 @@
         <!-- Render the sub layout -->
         {{{ body }}}
     </main>
-    <footer class="text-center py-3">
-        <!-- Footer content here -->
+    <footer>
+        <div>
+            <h2>Movie Theater Tagline at the Bottom of Footer</h2>
+            <a class="footer-address" href="https://www.google.com/maps/place/1223+W+Vogel+Ave,+Phoenix,+AZ+85021/@33.5728914,-112.0914349,17z/data=!3m1!4b1!4m6!3m5!1s0x872b6da95d8f9781:0xf998084a960c015a!8m2!3d33.572887!4d-112.08886!16s%2Fg%2F11c5mrj_4d?entry=ttu"  target="_blank">
+                Classic Flix Theater
+                <br>
+                1223 W Vogel Avenue
+                <br>
+                Phoenix, AZ, 85021
+            </a>
+            <div class="footer-contact">
+                <a href="tel:+6025557845">(602) 555-7845</a>
+                <br>
+                <a href="mailto:info@classicflix.com">info@classicflix.com</a>
+            </div>
+        </div>
     </footer>
 
     <!-- Render script for logged in users only -->
