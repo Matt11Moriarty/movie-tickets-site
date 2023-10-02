@@ -75,6 +75,12 @@ footer {
   padding: 2%;
 }
 
+iframe {
+  width: 60%;
+  border-radius: 6px;
+  margin-right: 2%;
+}
+
 .footer-address {
   text-align: left;
 }
@@ -120,13 +126,7 @@ nav ul li {
 nav ul li a {
   transition: .25s ease-in-out;
   padding: 12px;
-  /* background: var(--sub-color); */
 }
-
-/* nav ul li:nth-last-child(1) a {
-  border: 2px solid #F3E8EE;
-  border-radius: 4px;
-} */
 
 nav a, #logout {
   color: var(--white-sub);
@@ -162,7 +162,6 @@ footer > div {
 .movie-boxes:hover {
   transition: .25s ease-in-out;
   background: var(--sub-bg);
-  /* box-shadow: 0px 0 15px 0px rgb(243 232 238 / 15%); */
 }
 
 .movie-boxes .poster-box {
@@ -261,14 +260,15 @@ nav a:hover {
 }
 
 .info-containers h2 {
-  margin: 2%;
+  margin: 2% 0 4%;
+  width: 100%;
 }
 
-.about-container {
+.about-container, .contact-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 48px 0;
+  margin: 48px auto;
 }
 
 .about-container:nth-child(odd) {
@@ -286,7 +286,7 @@ nav a:hover {
   margin-left: 2%;
 }
 
-.about-container h3 {
+.about-container h3, .contact-container h3 {
   text-align: left;
 }
 
@@ -322,7 +322,7 @@ label {
 }
 
 form .form-group:nth-last-child(1) {
-  margin-top: 2rem;
+  margin-top: 32px;
 }
 
 /*----------------------Peter's Seat Code as Edited by Andrew-----------------------*/
@@ -433,6 +433,27 @@ form .form-group:nth-last-child(1) {
 }
 
 @media screen and (max-width:792px) {
+  header div {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  nav a, #logout {
+    font-size: 16px;
+  }
+
+  iframe {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-container div {
+    margin-top: 2%;
+  }
+
   .movie-boxes h2 {
     font-size: 3.75vw;
   }
@@ -459,10 +480,11 @@ form .form-group:nth-last-child(1) {
   }
 }
 
-@media screen and (max-width: 592px) {
+@media screen and (max-width: 648px) {
   header h1 {
     width: 100%;
     text-align: center;
+    margin-bottom: 2%;
   }
 
   .movie-boxes h2 {
@@ -478,11 +500,15 @@ form .form-group:nth-last-child(1) {
   }
 
   nav ul li {
-    margin: 1vw;
+    margin: .5vw;
   }
 
   nav ul li a {
     padding: 2vw;
+  }
+
+  .about-container p {
+    font-size: 14px;
   }
 
   #movie-container, header div, footer > div {
@@ -531,5 +557,11 @@ form .form-group:nth-last-child(1) {
     margin-bottom: 24px;
     width: 100%;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  nav ul li a, #logout {
+    font-size: 5vw;
   }
 }
