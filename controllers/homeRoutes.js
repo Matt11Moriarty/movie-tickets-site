@@ -17,6 +17,10 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/about', (req, res) => {
+  res.render('about', )
+})
+
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
@@ -98,9 +102,5 @@ router.get('/seatSelection', (req, res) => {
   
     res.render('seatSelection', { rows: rows });
   });
-
-  router.get('/about', (req, res) => {
-    res.render('about')
-  })
 
 module.exports = router;

@@ -1,10 +1,29 @@
-/*--REMOVING DEFAULT STYLING--*/
+:root {
+  --main-bg: #29292B;
+  --sub-bg: #3A4449;
+  --white-sub: #F3EFE8;
+  --main-color: #D94604;
+  --sub-color: #CA824D;
+  }
+
+/*--ADJUST DEFAULT STYLING--*/
 body, h2 {
   margin: 0;
 }
 
 a {
   text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 /*----------------------Andrew Styling Code-----------------------*/
 * {
@@ -12,45 +31,72 @@ a {
 }
 
 body {
-  background: #29292B;
-  /* background: url(../images/paper-texture-inv.png) repeat; */
+  background: var(--main-bg);
+  background: linear-gradient(to right,rgba(41, 41, 43, 0.6667), rgba(41, 41, 43, 0.6667)), url(../images/paper-texture-inv3-edit.png) repeat;
 }
 
 p {
   font-weight: 300;
-  color: #F3E8EE;
+  color: var(--white-sub);
   margin: 12px 0;
 }
 
-h2, a {
+h2, a, button {
   text-transform: uppercase;
 }
 
 h2, h3, a {
   text-align: center;
+  color: var(--white-sub) !important;
 }
 
-h2, h2 a, h3 {
-  color: #F3E8EE;
+h2, h2 a {
   font-weight: 600;
 }
 
-h2 a:hover {
-  color: #E66056
+h3 {
+  font-weight: 400;
+}
+
+h2 a:hover, footer a:hover {
+  color: var(--sub-color) !important;
+}
+
+header, footer {
+  background: var(--main-color);
 }
 
 header {
-  background: #D90429;
   margin-bottom: 1%;
 }
 
-header h1 {
+footer {
+  margin-top: 1%;
+  padding: 2%;
+}
+
+.footer-address {
+  text-align: left;
+}
+
+.footer-contact {
+  text-align: right;
+}
+
+header h1, footer h2 {
   margin: 0;
   font-weight: 300;
-  width: 380px;
-  line-height: 1;
-  font-size: 48px;
-  color: #F3E8EE;
+  color: var(--white-sub);
+}
+
+header h1 {
+  font-size: 52px;
+}
+
+footer h2 {
+  font-size: 28px;
+  width: 100%;
+  margin-bottom: 2%;
 }
 
 header div {
@@ -74,6 +120,7 @@ nav ul li {
 nav ul li a {
   transition: .25s ease-in-out;
   padding: 12px;
+  /* background: var(--sub-color); */
 }
 
 /* nav ul li:nth-last-child(1) a {
@@ -81,26 +128,30 @@ nav ul li a {
   border-radius: 4px;
 } */
 
-nav a {
-  color: #F3E8EE;
-  font-size: 24px;
+nav a, #logout {
+  color: var(--white-sub);
+  font-size: 18px;
   font-weight: 500;
   border-radius: 4px;
 }
 
-#movie-container, header div {
+footer > div {
+  align-items: center;
+  justify-content: space-between;
+}
+
+#movie-container, header div, footer > div {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   width: 95%;
-  max-width: 1512px;
+  max-width: 1920px;
 }
 
 .movie-boxes {
-  /* border: 2px solid #F3E8EE; */
-  /* background: linear-gradient(to right,rgba(0, 71, 66, 0.499), rgba(0, 56, 35, 0.7)), url(paper-texture.png) repeat;*/
+  border: 1px solid var(--sub-bg);
   border-radius: 6px;
-  width: 31.3333%;
+  width: 23%;
   margin: 1%;
   padding: 1%;
   display: inline-grid;
@@ -110,7 +161,7 @@ nav a {
 
 .movie-boxes:hover {
   transition: .25s ease-in-out;
-  background: rgba(71, 91, 99, 0.5);
+  background: var(--sub-bg);
   /* box-shadow: 0px 0 15px 0px rgb(243 232 238 / 15%); */
 }
 
@@ -131,9 +182,13 @@ nav a {
 }
 
 .mx-auto {
-  background: #FFFFFF;
+  background: var(--sub-bg);
   border-radius: 12px;
   padding: 48px 0;
+  width: 95%;
+  max-width: 1920px;
+  margin: auto;
+  justify-content: center;
 }
 
 .mx-auto h1, .mx-auto h2 {
@@ -144,34 +199,42 @@ nav a {
   width: 100%;
 }
 
+.col-md-6 {
+  max-width: 420px;
+}
+
+.mx-auto input {
+  padding: 12px 8px;
+}
+
 .main-action-btn {
   font-size: 24px;
   display: block;
-  width: calc(100% - 12px);
-  background: #D90429;
-  color: #F3E8EE;
+  width: 100%;
+  background: var(--main-color);
+  color: var(--white-sub);
   padding: 12px 6px;
   border-radius: 4px;
   transition: .25s ease-in-out;
 }
 
 .main-action-btn:hover, .secondary-button:hover {
-  color: #F3E8EE !important;
-  background: #E66056 !important;
+  color: var(--white-sub) !important;
+  background: var(--sub-color) !important;
   transition: .25s ease-in-out;
 }
 
 nav a:hover {
   transition: .25s ease-in-out;
-  background-color: #3A4449;
-  color: #F3E8EE !important;
+  background-color: var(--sub-bg);
+  color: var(--white-sub) !important;
 }
 
 .secondary-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #D90429;
+  background: var(--main-color);
   padding: 6px 12px 6px 6px;
   border-radius: 4px;
   margin: auto;
@@ -187,27 +250,79 @@ nav a:hover {
   margin: 0;
 }
 
-#theater-container, #confirmation-container {
-  background: #3A4449;
-  padding: 1%;
+.info-containers {
+  background: var(--sub-bg);
+  padding: 2%;
   max-width: 1480px;
   width: 95%;
   margin: auto;
   border-radius: 6px;
   height: auto;
-  min-height: 74vh;
+}
+
+.info-containers h2 {
+  margin: 2%;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 48px 0;
+}
+
+.about-container:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.about-container img {
+  border-radius: 6px;
+  width: 48%;
+  margin-right: 2%;
+}
+
+.about-container:nth-child(odd) img {
+  margin-right: 0;
+  margin-left: 2%;
+}
+
+.about-container h3 {
+  text-align: left;
+}
+
+.about-container:nth-child(odd) h3 {
+  text-align: right;
+}
+
+
+.about-container div {
+  width: 50%;
+}
+
+.about-container p {
+  font-size: 18px;
+  text-align: justify;
 }
 
 .card {
   margin: auto;
+  width: 480px;
 }
 
 .card img {
-  width: 240px;
+  width: 360px;
 }
 
 .card-title {
-  color: #29292B;
+  color: var(--main-bg);
+}
+
+label {
+  color: var(--white-sub);
+}
+
+form .form-group:nth-last-child(1) {
+  margin-top: 2rem;
 }
 
 /*----------------------Peter's Seat Code as Edited by Andrew-----------------------*/
@@ -218,102 +333,203 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  }
-  
-  /* Style each row */
-  .row {
-    margin-bottom: 10px;
-    align-items: center;
-  }
-  
-  .row-label {
-    font-size: 24px;
-    font-weight: 400;
-    color: #F3E8EE;
-  }
-  
-  /* Style the seats */
-  .seats {
-    display: inline-block;
-    margin-left: 10px;
-  }
-  
-  /* Style individual seats */
-  .seat {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-    background-color: #F3E8EE;
-    border-radius: 2px 2px 12px 12px;
-    text-align: center;
-    line-height: 30px;
-    cursor: pointer; /* Add a cursor pointer for interactive selection */
-    transition: .25s ease-in-out;
-  }
+}
 
-  .seat:hover {
-    background:#E66056;
-    transition: .25s ease-in-out;
-  }
-  
-  /* Style selected seats */
-  .seat.selected {
-    background-color: #D90429;
-    color: #F3E8EE;
-  }
-  
-  /* Style reserved seats */
-  .seat.reserved {
-    background-color: #29292B;
-    color: #F3E8EE;
-    cursor: not-allowed; 
-  }
+/* Style each row */
+.row {
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.row-label {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--white-sub);
+}
+
+/* Style the seats */
+.seats {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Style individual seats */
+.seat {
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  margin: 5px;
+  font-size: 20px;
+  background-color: var(--white-sub);
+  border-radius: 2px 2px 12px 12px;
+  text-align: center;
+  line-height: 2;
+  cursor: pointer; /* Add a cursor pointer for interactive selection */
+  transition: .25s ease-in-out;
+}
+
+.seat:hover {
+  background: var(--sub-color);
+  transition: .25s ease-in-out;
+}
+
+/* Style selected seats */
+.seat.selected {
+  background-color: var(--main-color);
+  color: #F3E8EE;
+}
+
+/* Style reserved seats */
+.seat.reserved {
+  background-color: var(--main-bg);
+  color: var(--white-sub);
+  cursor: not-allowed; 
+}
   
 /* Style the screen section */
 .screen {
-    height: 20px; 
-    background-color: #29292B;
-    width: 520px;
-    margin: 20px auto;
-    padding: 18px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  font-size: 24px;
+  height: auto; 
+  background-color: var(--main-bg);
+  max-width: 520px;
+  margin: 18px auto 48px auto;
+  padding: 6px 18px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   /* Style the screen text */
-  .screen-text {
-    color: #fff; 
-    font-size: 18px; 
-  }
+.screen-text {
+  color: var(--white-sub); 
+  font-size: 18px; 
+}
 
 .submit-button {
-  width: 420px;
+  max-width: 420px;
+  width: 100%;
+  margin: 24px 0;
 }
 
 /* -----------Responsive------------ */
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1680px) {
+  .movie-boxes {
+    width: 31.3333%;
+    margin: 1%;
+    padding: 1%;
+  }
+}
+
+@media screen and (max-width:996px) {
   .movie-boxes {
     width: 47%;
+  }
+
+  .movie-boxes, .info-containers {
     margin: 1.5%;
     padding: 1.5%;
   }
 }
 
 @media screen and (max-width:792px) {
-  header {
-    background-color: darkgreen;
+  .movie-boxes h2 {
+    font-size: 3.75vw;
+  }
+
+  .about-container {
+    display: block;
+  }
+
+  .about-container img, .about-container div, .about-container:nth-child(odd) img {
+    width: 100%;
+    margin: auto;
+  }
+
+  .about-container h3, .about-container:nth-child(odd) h3 {
+    text-align: center;
+    margin: 12px 0;
+  }
+
+  .seat {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    margin: 3px;
   }
 }
 
 @media screen and (max-width: 592px) {
-  header {
-    background-color: darkmagenta;
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .movie-boxes h2 {
+    font-size: 7.5vw;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    margin: 1vw;
+  }
+
+  nav ul li a {
+    padding: 2vw;
+  }
+
+  #movie-container, header div, footer > div {
+    width: 100%;
   }
 
   .movie-boxes {
     width: 100%;
+  }
+
+  .movie-boxes, .info-containers {
+    margin: 2.5%;
+    padding: 2.5%;
+  }
+
+  .row-label {
+    width: 100%;
+    text-align: center;
+  }
+
+  .seats {
+    margin: auto;
+  }
+
+  .seat {
+    width: 7vw;
+    height: 7vw;
+    font-size: 3.5vw;
+    margin: 0.25vw;
+  }
+
+  .card {
+    padding: 1%;
+    max-width: 100%;
+  }
+
+  .card img {
+    width: 240px;
+  }
+
+  .footer-address {
+    margin: 24px auto;
+  }
+
+  .footer-contact {
+    margin-bottom: 24px;
+    width: 100%;
+    text-align: center;
   }
 }
